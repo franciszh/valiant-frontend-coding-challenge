@@ -26,5 +26,6 @@ describe('LoanPurpose', () => {
     await waitFor(() => expect(getByText('Day-to-day capital')).toBeInTheDocument())
     expect(getByText('Vehicle or transport')).toBeInTheDocument()
     expect(getByText('Financing a property')).toBeInTheDocument()
+    expect(getByText('Please select one loan purpose')).toBeInTheDocument()
   })
 })

@@ -27,5 +27,6 @@ describe('LoanTerm', () => {
     expect(getByText('12 months')).toBeInTheDocument()
     expect(getByText('2 years')).toBeInTheDocument()
     expect(getByText('3 years')).toBeInTheDocument()
+    expect(getByText('Please select one loan term')).toBeInTheDocument()
   })
 })

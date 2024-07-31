@@ -6,7 +6,7 @@ Given the fat marker, a very simple inline loan calculator was expected however 
 
 ### System Design
 
-Given the decision made from the above section, each step will be a standalone component and dynamically render itself when the previous step is completed. This design reflects the concepts of micro-frontend, performance optimization and scalability for potentially more complicated loan calculator.
+Given the decision made from the above section, each step will be a standalone component which is driven by a config file and dynamically render itself when the previous step is completed. This design reflects the concepts of micro-frontend, performance optimization and scalability for potentially more complicated loan calculator.
 
 ### Sprint or Kanban
 
