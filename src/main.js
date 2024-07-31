@@ -9,5 +9,6 @@ app
   .component('LoanPurpose', defineAsyncComponent(() => import('./components/LoanPurpose.vue')))
   .component('RepaymentPeriod', defineAsyncComponent(() => import('./components/RepaymentPeriod.vue')))
   .component('LoanTerm', defineAsyncComponent(() => import('./components/LoanTerm.vue')))
+  .component('LoanResult', defineAsyncComponent(() => import('./components/LoanResult.vue')))
 
 app.mount('#app')

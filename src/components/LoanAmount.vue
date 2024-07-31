@@ -6,6 +6,10 @@ const props = defineProps({
     type: Function,
     default: undefined,
   },
+  setFormValid: {
+    type: Function,
+    default: undefined,
+  },
 })
 const model = defineModel({
   type: String,
@@ -25,6 +29,9 @@ const validator = (event) => {
 const inputOnChangeHandler = (event) => {
   const validationMessage = validator(event)
   errorMessage.value = validationMessage
+  if (props.setFormValid) {
+    props.setFormValid(!validationMessage)
+  }
   if (!validationMessage && props.moveToNextStep) {
     props.moveToNextStep()
   }
