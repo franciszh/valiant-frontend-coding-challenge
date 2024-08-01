@@ -31,6 +31,19 @@ describe('The loan calculator', () => {
     cy.focused().contains('$33,216 over the loan term')
   })
 
+  it('displays the progress bar correctly based on the active step', () => {
+    cy.findByRole('progressbar').contains('0%')
+    cy.focused().type(30000)
+    cy.findByLabelText('How would the loan be used?').should('exist')
+    cy.findByRole('progressbar').contains('25%')
+    cy.focused().select('Day-to-day capital')
+    cy.findByRole('progressbar').contains('50%')
+    cy.focused().select('Monthly')
+    cy.findByRole('progressbar').contains('75%')
+    cy.focused().select('2 years')
+    cy.findByRole('progressbar').contains('100%')
+  })
+
   it('displays the error message when the loan amount input is invalid', () => {
     cy.findByLabelText('How much would you like to borrow?').type('thisIsAString')
     cy.findByText('Please enter a number').should('exist')

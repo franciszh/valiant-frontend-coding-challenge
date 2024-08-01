@@ -2,6 +2,7 @@
 import { ref, computed, watch } from 'vue'
 import { stepsConfig } from './configs/steps'
 import PMT from './utils/PMT'
+import ProgressBar from './components/ProgressBar.vue'
 defineOptions({
   name: 'App',
 })
@@ -51,6 +52,7 @@ watch([formModel.value, isFormValid], ([formData, isFormValid]) => {
   <!-- TODO: Complete the coding challenge here! -->
   <div class="flex justify-center pt-10">
     <main class="w-2/4">
+      <ProgressBar :progress="currentStep / stepsConfig.length * 100" />
       <form>
         <component
           :is="step.cmpName"
