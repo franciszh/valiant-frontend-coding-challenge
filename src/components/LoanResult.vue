@@ -1,4 +1,6 @@
 <script setup>
+import { loanResultParaStyle, loanResultMessageBox } from '../utils/styles'
+
 defineProps({
   instalment: {
     type: Number,
@@ -12,7 +14,9 @@ defineProps({
 </script>
 
 <template>
-  <section>
-    <p>You are expected to repay ${{ instalment }} per instalment and totally ${{ instalment * numOfInstalment }} over the loan term</p>
+  <section :class="loanResultMessageBox">
+    <p :class="loanResultParaStyle">
+      You are expected to repay <span class="font-bold">${{ instalment.toLocaleString() }} per instalment</span> and <span class="font-bold">${{ (instalment * numOfInstalment).toLocaleString() }} over the loan term</span> in total
+    </p>
   </section>
 </template>

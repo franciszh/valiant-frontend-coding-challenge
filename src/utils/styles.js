@@ -1,0 +1,6 @@
+export const formLabelStyle = 'font-sans text-xl font-bold'
+export const formSelectStyle = 'peer my-2 size-full rounded-[7px] border bg-transparent px-3 py-2.5 font-sans text-sm font-normal outline outline-0 transition-all focus:border-gray-900 focus:outline-0 disabled:border-0'
+export const formTextInputStyle = 'peer my-2 size-full rounded-[7px] border bg-transparent px-3 py-2.5 font-sans text-sm font-normal outline outline-0 transition-all placeholder-shown:border focus:border-gray-900 focus:outline-0 disabled:border-0 invalid:border-rose-500'
+export const formTextInputErrorStyle = 'text-xs text-rose-500'
+export const loanResultParaStyle = 'font-sans text-xl'
+export const loanResultMessageBox = 'bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-8 shadow-md'

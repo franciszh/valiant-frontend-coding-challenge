@@ -16,12 +16,12 @@ describe('RepaymentPeriod', () => {
 
   it('should render the dropdown with correct label', () => {
     const { getByLabelText } = render(RepaymentPeriod)
-    expect(getByLabelText('How frequent the loan will be paid?')).toBeInTheDocument()
+    expect(getByLabelText('How frequent the loan would be paid?')).toBeInTheDocument()
   })
 
   it('should have the dropdown render the right options', async () => {
     const { getByLabelText, getByText } = render(RepaymentPeriod)
-    const dropdown = getByLabelText('How frequent the loan will be paid?')
+    const dropdown = getByLabelText('How frequent the loan would be paid?')
     await fireEvent.click(dropdown)
     await waitFor(() => expect(getByText('Weekly')).toBeInTheDocument())
     expect(getByText('Weekly')).toBeInTheDocument()

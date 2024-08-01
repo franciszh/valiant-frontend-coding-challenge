@@ -4,6 +4,7 @@ import App from '@/App.vue'
 
 const app = createApp(App)
 // register the dynamic components globally
+// dynamic loading can be optimized more in prod env like add error handling and timeout
 app
   .component('LoanAmount', defineAsyncComponent(() => import('./components/LoanAmount.vue')))
   .component('LoanPurpose', defineAsyncComponent(() => import('./components/LoanPurpose.vue')))

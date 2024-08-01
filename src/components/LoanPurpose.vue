@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { getData } from '../utils/network'
 import { loanPurposeEndPoint } from '../configs/endpoints'
+import { formLabelStyle, formSelectStyle } from '../utils/styles'
 
 const props = defineProps({
   moveToNextStep: {
@@ -20,12 +21,16 @@ onMounted(async () => {
 </script>
 
 <template>
-  <section>
-    <label for="loanPurpose">How will the loan be used?</label>
+  <section class="py-3">
+    <label
+      for="loanPurpose"
+      :class="formLabelStyle"
+    >How would the loan be used?</label>
     <select
       id="loanPurpose"
       v-model="model"
       name="loanPurpose"
+      :class="formSelectStyle"
       @change="props.moveToNextStep"
     >
       <option

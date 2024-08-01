@@ -49,17 +49,23 @@ watch([formModel.value, isFormValid], ([formData, isFormValid]) => {
 
 <template>
   <!-- TODO: Complete the coding challenge here! -->
-  <component
-    :is="step.cmpName"
-    v-for="(step, index) in stepsToShow"
-    :key="step.cmpName"
-    v-model="formModel[step.modelKey]"
-    :move-to-next-step="updateCurrentStep(index + 1)"
-    :set-form-valid="setFormValid"
-  />
-  <LoanResult
-    v-if="instalment !== null"
-    :instalment="instalment"
-    :num-of-instalment="Number(formModel.repaymentsByYear) / 12 * Number(formModel.loanMonths)"
-  />
+  <div class="flex justify-center pt-10">
+    <main class="w-2/4">
+      <form>
+        <component
+          :is="step.cmpName"
+          v-for="(step, index) in stepsToShow"
+          :key="step.cmpName"
+          v-model="formModel[step.modelKey]"
+          :move-to-next-step="updateCurrentStep(index + 1)"
+          :set-form-valid="setFormValid"
+        />
+        <LoanResult
+          v-if="instalment !== null"
+          :instalment="instalment"
+          :num-of-instalment="Number(formModel.repaymentsByYear) / 12 * Number(formModel.loanMonths)"
+        />
+      </form>
+    </main>
+  </div>
 </template>

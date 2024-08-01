@@ -10,7 +10,7 @@ Given the decision made from the above section, each step will be a standalone c
 
 ### Sprint or Kanban
 
-Regardless of which Agile flows to use, I will break down the feature as in a small team with 2 or 3 engineers. Each task should be test driven and minimise the blockage to peers as much as possible. Please take each to-do item as an individual jira as in the real development cycles.
+Regardless of which Agile flow to use, I will break down the feature as in a small team with 2 or 3 engineers. Each task should be test driven and minimise the blockage to peers as much as possible. Please take each to-do item as an individual jira as in the real development cycles.
 
 ### TODOs
 
