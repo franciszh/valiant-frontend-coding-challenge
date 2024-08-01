@@ -55,6 +55,7 @@ const debouncedOnChange = db(inputOnChangeHandler, 500)
     <input
       id="loanAmount"
       v-model="model"
+      v-focus
       :class="formTextInputStyle"
       type="text"
       name="loanAmount"

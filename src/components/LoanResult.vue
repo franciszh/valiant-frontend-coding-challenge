@@ -15,7 +15,12 @@ defineProps({
 
 <template>
   <section :class="loanResultMessageBox">
-    <p :class="loanResultParaStyle">
+    <p
+      ref="loanResultPara"
+      v-focus
+      tabindex="0"
+      :class="loanResultParaStyle"
+    >
       You are expected to repay <span class="font-bold">${{ instalment.toLocaleString() }} per instalment</span> and <span class="font-bold">${{ (instalment * numOfInstalment).toLocaleString() }} over the loan term</span> in total
     </p>
   </section>

@@ -29,6 +29,7 @@ onMounted(async () => {
     <select
       id="repaymentPeriod"
       v-model="model"
+      v-focus
       name="repaymentPeriod"
       :class="formSelectStyle"
       @change="props.moveToNextStep"

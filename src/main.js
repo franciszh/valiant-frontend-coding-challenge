@@ -11,5 +11,7 @@ app
   .component('RepaymentPeriod', defineAsyncComponent(() => import('./components/RepaymentPeriod.vue')))
   .component('LoanTerm', defineAsyncComponent(() => import('./components/LoanTerm.vue')))
   .component('LoanResult', defineAsyncComponent(() => import('./components/LoanResult.vue')))
-
+app.directive('focus', {
+  mounted: (el) => el.focus(),
+})
 app.mount('#app')
